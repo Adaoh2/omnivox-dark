@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           OmniVox Dark
 @namespace      https://github.com/Adaoh2/omnivox-dark/
-@version        1.0.0
+@version        1.0.1
 @description    Dark mode pour Omnivox
 @author         adaoh2
 ==/UserStyle== */
@@ -30,12 +30,31 @@
 
 @-moz-document url-prefix("https://bdeb.omnivox.ca/intr")/* Accueil */
 {
-	/* main body */
+	/* ---------------------------- top bar ---------------------------- */
+	header #headerFixedBar nav #headerNavbarProfile {
+		background-color: var(--fg-primary);
+	}
+	header #headerFixedBar #headerOmnivoxLogo:hover,
+	header #headerFixedBar .headerLeaRetour:hover {
+		background-color: var(--fg-primary);
+		transition: all 0.25s;
+		filter: brightness(75%);
+		color: #008ae8;
+	}
+	header #headerFixedBar #headerOmnivoxLogo,
+	header #headerFixedBar .headerLeaRetour {
+		background-color: var(--fg-primary);
+		transition: all 0.25s;
+	}
+	header #headerFixedBar #wrapper-headerOmnivoxLogo {
+		background-color: var(--fg-primary);
+	}
+	/* ---------------------------- main body ---------------------------- */
 	#spRightSize {
 		background-color: var(--bg-primary);
 	}
 	body #spLeftSize {
-		background-color: var(--bg-primary);
+		background-color: var(--bg-secondary);
 	}
 	/* quoi de neuf*/
 	#QuoiDeNeufsWrapper {
@@ -47,7 +66,7 @@
 	.carte-QDN:first-child {
 		background-color: var(--fg-primary);
 	}
-	/* actualites */
+	/* ---------------------------- actualites ---------------------------- */
 	.largeCardContainer .carte-portail .carte-portail-contenu {
 		background-color: var(--bg-secondary);
 	}
@@ -76,7 +95,7 @@
 		transition: all 0.25s;
 	}
 	.carte-portail .carte-portail-header img:not(.playOverEmbed):not(.playOver) {
-		filter: brightness(50%); 
+		filter: brightness(50%);
 		transition: all 0.25s;
 	}
 	.carte-portail .carte-portail-header img:not(.playOverEmbed):not(.playOver):hover {
@@ -86,5 +105,34 @@
 	.actualites-liste-wrapper .carte-portail .carte-portail-header img:not(.playOverEmbed):hover {
 		transition: all 0.25s;
 		filter: brightness(75%);
+	}
+	/* ---------------------------- Evenements ---------------------------- */
+	/* calendrier */
+	.calendar-wrapper .card-panel {
+		background-color: var(--bg-secondary);
+	}
+	.materialize-wrapper .skycalendar-table td button {
+		color: var(--text-color);
+	}
+	.materialize-wrapper .skycalendar .selects-container .input-field input {
+		color: var(--text-color);
+	}
+	/* autres */
+	.materialize-wrapper *,
+	.materialize-wrapper ::before,
+	.materialize-wrapper ::after {
+		color: var(--text-color);
+	}
+	.evenements-wrapper #calendrierEvenement-filtres .calendrierEvenement-filtres-wrapper .filtre-evenements {
+		background-color: var(--fg-primary);
+	}
+	.calendar-list-wrapper button#btn-load-more-passe {
+		background-color: var(--fg-primary);
+	}
+	.calendar-list-wrapper button#btn-load-more {
+		background-color: var(--fg-primary);
+	}
+	.calendar-list-wrapper .liste-evenements .evenement[data-state="passee"] * {
+		color: var(--text-color);
 	}
 }
