@@ -1,0 +1,90 @@
+/* ==UserStyle==
+@name           OmniVox Dark
+@namespace      https://github.com/Adaoh2/omnivox-dark/
+@version        1.0.0
+@description    Dark mode pour Omnivox
+@author         adaoh2
+==/UserStyle== */
+:root {
+	--bg-primary: #101010;
+	--bg-secondary: #141414;
+	--fg-primary: #181818;
+	--text-color: #ddd;
+	--highlight-organge: #f04400;
+}
+@-moz-document url-prefix("https://bdeb.omnivox.ca/Login/")/* Login */
+{
+	body.body-identification-intraflex .identification-intraflex {
+		background-color: var(--bg-primary);
+	}
+	body.body-identification-intraflex .identification-intraflex .contenu-identification-intraflex .section-login #section-form label {
+		color: var(--text-color);
+	}
+	body.body-identification-intraflex .identification-intraflex .contenu-identification-intraflex .section-login #section-form .div-identifiant #Identifiant {
+		color: var(--text-color);
+	}
+	body.body-identification-intraflex .identification-intraflex .contenu-identification-intraflex .section-login #section-form input {
+		color: var(--text-color)
+	}
+}
+
+@-moz-document url-prefix("https://bdeb.omnivox.ca/intr")/* Accueil */
+{
+	/* main body */
+	#spRightSize {
+		background-color: var(--bg-primary);
+	}
+	body #spLeftSize {
+		background-color: var(--bg-primary);
+	}
+	/* quoi de neuf*/
+	#QuoiDeNeufsWrapper {
+		background-color: var(--bg-primary);
+	}
+	.carte-QDN .carte-portail-contenu .carte-QDN:first-child {
+		background-color: var(--bg-secondary);
+	}
+	.carte-QDN:first-child {
+		background-color: var(--fg-primary);
+	}
+	/* actualites */
+	.largeCardContainer .carte-portail .carte-portail-contenu {
+		background-color: var(--bg-secondary);
+	}
+	.largeCardContainer .carte-portail .carte-portail-footer {
+		background-color: var(--bg-secondary);
+	}
+	.carte-portail .carte-portail-desc,
+	.carte-portail .carte-portail-desc-style,
+	.communaute-recent-wrapper .date-card {
+		color: var(--text-color);
+	}
+	.slider-portail-zone.slider-portail-zone-next {
+		background-image: linear-gradient(to right, rgba(0, 0, 0, 0), var(--bg-primary));
+	}
+	.slider-portail-zone.slider-portail-zone-previous {
+		background-image: linear-gradient(to left, rgba(0, 0, 0, 0), var(--bg-primary));
+	}
+	.slider-portail .slider-portail-zone.slider-portail-zone-previous .slider-portail-btn {
+		background-color: var(--fg-primary);
+	}
+	.slider-portail .slider-portail-zone.slider-portail-zone-next .slider-portail-btn {
+		background-color: var(--fg-primary);
+	}
+	.actualites-liste-wrapper .carte-portail .carte-portail-header img:not(.playOverEmbed) {
+		filter: brightness(50%);
+		transition: all 0.25s;
+	}
+	.carte-portail .carte-portail-header img:not(.playOverEmbed):not(.playOver) {
+		filter: brightness(50%); 
+		transition: all 0.25s;
+	}
+	.carte-portail .carte-portail-header img:not(.playOverEmbed):not(.playOver):hover {
+		transition: all 0.25s;
+		filter: brightness(75%)
+	}
+	.actualites-liste-wrapper .carte-portail .carte-portail-header img:not(.playOverEmbed):hover {
+		transition: all 0.25s;
+		filter: brightness(75%);
+	}
+}
