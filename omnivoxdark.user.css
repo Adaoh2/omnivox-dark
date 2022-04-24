@@ -1,10 +1,12 @@
-:root {
-    --bg-primary: #141414;
-    --bg-secondary: #181818;
-    --fg-primary: #222222;
-    --text-color: #cecece;
-}
+/* ==UserStyle==
+@name           OmniVox Dark
+@namespace      https://github.com/Adaoh2/omnivox-dark/
+@version        2.0.0
+@description    Dark mode pour Omnivox
+@author         adaoh2
+==/UserStyle== */
 
+@-moz-document url-prefix("bdeb.omnivox.ca"), url-prefix("www-bdb-ovx.omnivox.ca") {
 /* top bar en blanc */
 header #headerFixedBar {
     background-color: #ffffffd6;
@@ -12,13 +14,6 @@ header #headerFixedBar {
 }
 
 @media (prefers-color-scheme: dark) {
-    /* ------ PAGE ACCUEIL ------ */
-    .wrapperFixed,
-    #spRightSize {
-        background-color: var(--bg-primary);
-        color: #fff;
-    }
-
     /* --- top bar --- */
     /* fond */
     header #headerFixedBar {
@@ -30,6 +25,26 @@ header #headerFixedBar {
     header #headerFixedBar #headerOmnivoxLogo:hover,
     header #headerFixedBar span.headerOmnivoxLogo:hover {
         background-color: #d5d5d524;
+    }
+}
+}
+
+@-moz-document domain("bdeb.omnivox.ca") {
+:root {
+    --bg-primary: #141414;
+    --bg-secondary: #181818;
+    --fg-primary: #222222;
+    --text-color: #cecece;
+}
+
+
+
+@media (prefers-color-scheme: dark) {
+    /* ------ PAGE ACCUEIL ------ */
+    .wrapperFixed,
+    #spRightSize {
+        background-color: var(--bg-primary);
+        color: #fff;
     }
 
     /* boutons mio lea */
@@ -112,4 +127,9 @@ header #headerFixedBar {
     .calendar-list-wrapper button#btn-load-more {
         background: #222;
     }
+}
+}
+
+@-moz-document domain("www-bdb-ovx.omnivox.ca") {
+
 }
