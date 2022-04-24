@@ -1,138 +1,115 @@
-/* ==UserStyle==
-@name           OmniVox Dark
-@namespace      https://github.com/Adaoh2/omnivox-dark/
-@version        1.0.1
-@description    Dark mode pour Omnivox
-@author         adaoh2
-==/UserStyle== */
 :root {
-	--bg-primary: #101010;
-	--bg-secondary: #141414;
-	--fg-primary: #181818;
-	--text-color: #ddd;
-	--highlight-organge: #f04400;
-}
-@-moz-document url-prefix("https://bdeb.omnivox.ca/Login/")/* Login */
-{
-	body.body-identification-intraflex .identification-intraflex {
-		background-color: var(--bg-primary);
-	}
-	body.body-identification-intraflex .identification-intraflex .contenu-identification-intraflex .section-login #section-form label {
-		color: var(--text-color);
-	}
-	body.body-identification-intraflex .identification-intraflex .contenu-identification-intraflex .section-login #section-form .div-identifiant #Identifiant {
-		color: var(--text-color);
-	}
-	body.body-identification-intraflex .identification-intraflex .contenu-identification-intraflex .section-login #section-form input {
-		color: var(--text-color)
-	}
+    --bg-primary: #141414;
+    --bg-secondary: #181818;
+    --fg-primary: #222222;
+    --text-color: #cecece;
 }
 
-@-moz-document url-prefix("https://bdeb.omnivox.ca/intr")/* Accueil */
-{
-	/* ---------------------------- top bar ---------------------------- */
-	header #headerFixedBar nav #headerNavbarProfile {
-		background-color: var(--fg-primary);
-	}
-	header #headerFixedBar #headerOmnivoxLogo:hover,
-	header #headerFixedBar .headerLeaRetour:hover {
-		background-color: var(--fg-primary);
-		transition: all 0.25s;
-		filter: brightness(75%);
-		color: #008ae8;
-	}
-	header #headerFixedBar #headerOmnivoxLogo,
-	header #headerFixedBar .headerLeaRetour {
-		background-color: var(--fg-primary);
-		transition: all 0.25s;
-	}
-	header #headerFixedBar #wrapper-headerOmnivoxLogo {
-		background-color: var(--fg-primary);
-	}
-	/* ---------------------------- main body ---------------------------- */
-	#spRightSize {
-		background-color: var(--bg-primary);
-	}
-	body #spLeftSize {
-		background-color: var(--bg-secondary);
-	}
-	/* quoi de neuf*/
-	#QuoiDeNeufsWrapper {
-		background-color: var(--bg-primary);
-	}
-	.carte-QDN .carte-portail-contenu .carte-QDN:first-child {
-		background-color: var(--bg-secondary);
-	}
-	.carte-QDN:first-child {
-		background-color: var(--fg-primary);
-	}
-	/* ---------------------------- actualites ---------------------------- */
-	.largeCardContainer .carte-portail .carte-portail-contenu {
-		background-color: var(--bg-secondary);
-	}
-	.largeCardContainer .carte-portail .carte-portail-footer {
-		background-color: var(--bg-secondary);
-	}
-	.carte-portail .carte-portail-desc,
-	.carte-portail .carte-portail-desc-style,
-	.communaute-recent-wrapper .date-card {
-		color: var(--text-color);
-	}
-	.slider-portail-zone.slider-portail-zone-next {
-		background-image: linear-gradient(to right, rgba(0, 0, 0, 0), var(--bg-primary));
-	}
-	.slider-portail-zone.slider-portail-zone-previous {
-		background-image: linear-gradient(to left, rgba(0, 0, 0, 0), var(--bg-primary));
-	}
-	.slider-portail .slider-portail-zone.slider-portail-zone-previous .slider-portail-btn {
-		background-color: var(--fg-primary);
-	}
-	.slider-portail .slider-portail-zone.slider-portail-zone-next .slider-portail-btn {
-		background-color: var(--fg-primary);
-	}
-	.actualites-liste-wrapper .carte-portail .carte-portail-header img:not(.playOverEmbed) {
-		filter: brightness(50%);
-		transition: all 0.25s;
-	}
-	.carte-portail .carte-portail-header img:not(.playOverEmbed):not(.playOver) {
-		filter: brightness(50%);
-		transition: all 0.25s;
-	}
-	.carte-portail .carte-portail-header img:not(.playOverEmbed):not(.playOver):hover {
-		transition: all 0.25s;
-		filter: brightness(75%)
-	}
-	.actualites-liste-wrapper .carte-portail .carte-portail-header img:not(.playOverEmbed):hover {
-		transition: all 0.25s;
-		filter: brightness(75%);
-	}
-	/* ---------------------------- Evenements ---------------------------- */
-	/* calendrier */
-	.calendar-wrapper .card-panel {
-		background-color: var(--bg-secondary);
-	}
-	.materialize-wrapper .skycalendar-table td button {
-		color: var(--text-color);
-	}
-	.materialize-wrapper .skycalendar .selects-container .input-field input {
-		color: var(--text-color);
-	}
-	/* autres */
-	.materialize-wrapper *,
-	.materialize-wrapper ::before,
-	.materialize-wrapper ::after {
-		color: var(--text-color);
-	}
-	.evenements-wrapper #calendrierEvenement-filtres .calendrierEvenement-filtres-wrapper .filtre-evenements {
-		background-color: var(--fg-primary);
-	}
-	.calendar-list-wrapper button#btn-load-more-passe {
-		background-color: var(--fg-primary);
-	}
-	.calendar-list-wrapper button#btn-load-more {
-		background-color: var(--fg-primary);
-	}
-	.calendar-list-wrapper .liste-evenements .evenement[data-state="passee"] * {
-		color: var(--text-color);
-	}
+/* top bar en blanc */
+header #headerFixedBar {
+    background-color: #ffffffd6;
+    backdrop-filter: blur(20px);
+}
+
+@media (prefers-color-scheme: dark) {
+    /* ------ PAGE ACCUEIL ------ */
+    .wrapperFixed,
+    #spRightSize {
+        background-color: var(--bg-primary);
+        color: #fff;
+    }
+
+    /* --- top bar --- */
+    /* fond */
+    header #headerFixedBar {
+        background-color: #161616e0;
+        backdrop-filter: blur(20px);
+    }
+    /* boutons */
+    header #headerFixedBar nav a.headerNavbarLink:hover,
+    header #headerFixedBar #headerOmnivoxLogo:hover,
+    header #headerFixedBar span.headerOmnivoxLogo:hover {
+        background-color: #d5d5d524;
+    }
+
+    /* boutons mio lea */
+    /* texte */
+    #region-raccourcis-services-skytech .raccourci {
+        color: var(--text-color);
+    }
+    /* --- slider actualites --- */
+    /* degrade cotes */
+    .slider-portail-zone.slider-portail-zone-next {
+        background-image: linear-gradient(to right, rgba(251, 251, 251, 0), var(--bg-primary));
+    }
+    .slider-portail-zone.slider-portail-zone-previous {
+        background-image: linear-gradient(to left, rgba(251, 251, 251, 0), var(--bg-primary));
+    }
+
+    /* boutons fleche */
+    .portail-btn {
+        background-color: #2d2d2d;
+    }
+
+    /* cartes */
+    .carte-portail,
+    .carte-portail .carte-portail-desc,
+    .carte-portail .carte-portail-desc-style,
+    .communaute-recent-wrapper .date-card {
+        background-color: #222;
+        color: var(--text-color);
+    }
+
+    /* --- quoi de neuf ---*/
+    /* fond cartes */
+    #QuoiDeNeufsWrapper {
+        background-color: var(--bg-primary);
+    }
+
+    /* texte */
+    .wrapper-qdn-classe-distance .carte-QDN-classeDistance .carte-portail-titre,
+    .wrapper-qdn-classe-distance .carte-QDN-classeDistance .carte-portail-contenu,
+    .wrapper-qdn-classe-distance .carte-QDN-classeDistance .carte-cours-distance-detail,
+    .wrapper-qdn-classe-distance .carte-QDN-classeDistance[data-type="Futur"] .carte-portail-titre span:not(.long-titre) {
+        color: var(--text-color);
+    }
+
+    /* --- calendrier --- */
+    /* fond */
+    .materialize-wrapper .card-panel {
+        background-color: #222;
+    }
+
+    /* selection mois */
+    .materialize-wrapper .skycalendar .selects-container .input-field input {
+        color: #fff;
+    }
+
+    /* dates de l'autre mois */
+    .materialize-wrapper .skycalendar-table td.is-outside-current-month,
+    .materialize-wrapper .skycalendar-table td.is-disabled {
+        color: #6a6a6a;
+    }
+
+    /* filtres */
+    .filtre-evenements {
+        background-color: #222;
+    }
+
+    /* Evenements a droite calendrier */
+    .calendar-list-wrapper .liste-evenements .evenement .evenement-titre,
+    .calendar-list-wrapper .liste-evenements .evenement .evenement-description {
+        color: var(--text-color);
+    }
+
+    /* carte quand on clique sur un evenement */
+    .modal {
+        background-color: var(--bg-secondary);
+    }
+
+    /* bouton precedent suivant */
+    .calendar-list-wrapper button#btn-load-more-passe,
+    .calendar-list-wrapper button#btn-load-more {
+        background: #222;
+    }
 }
