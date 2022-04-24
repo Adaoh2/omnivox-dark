@@ -1,15 +1,13 @@
 /* ==UserStyle==
 @name           OmniVox Dark
 @namespace      https://github.com/Adaoh2/omnivox-dark/
-@version        2.0.0
+@version        2.0.1
 @description    Dark mode pour Omnivox
 @author         adaoh2
 ==/UserStyle== */
 
-@-moz-document url-prefix("bdeb.omnivox.ca"),
-url-prefix("www-bdb-ovx.omnivox.ca") {
-
-    /* top bar en blanc */
+@-moz-document domain("bdeb.omnivox.ca"), domain("www-bdb-ovx.omnivox.ca") {
+/* top bar en blanc */
     header #headerFixedBar {
         background-color: #ffffffd6;
         backdrop-filter: blur(20px);
@@ -34,7 +32,7 @@ url-prefix("www-bdb-ovx.omnivox.ca") {
 }
 
 @-moz-document domain("bdeb.omnivox.ca") {
-    :root {
+:root {
         --bg-primary: #141414;
         --bg-secondary: #181818;
         --fg-primary: #222222;
@@ -137,4 +135,6 @@ url-prefix("www-bdb-ovx.omnivox.ca") {
     }
 }
 
-@-moz-document domain("www-bdb-ovx.omnivox.ca") {}
+@-moz-document domain("www-bdb-ovx.omnivox.ca") {
+
+}
