@@ -6,130 +6,135 @@
 @author         adaoh2
 ==/UserStyle== */
 
-@-moz-document url-prefix("bdeb.omnivox.ca"), url-prefix("www-bdb-ovx.omnivox.ca") {
-/* top bar en blanc */
-header #headerFixedBar {
-    background-color: #ffffffd6;
-    backdrop-filter: blur(20px);
-}
+@-moz-document url-prefix("bdeb.omnivox.ca"),
+url-prefix("www-bdb-ovx.omnivox.ca") {
 
-@media (prefers-color-scheme: dark) {
-    /* --- top bar --- */
-    /* fond */
+    /* top bar en blanc */
     header #headerFixedBar {
-        background-color: #161616e0;
+        background-color: #ffffffd6;
         backdrop-filter: blur(20px);
     }
-    /* boutons */
-    header #headerFixedBar nav a.headerNavbarLink:hover,
-    header #headerFixedBar #headerOmnivoxLogo:hover,
-    header #headerFixedBar span.headerOmnivoxLogo:hover {
-        background-color: #d5d5d524;
+
+    @media (prefers-color-scheme: dark) {
+
+        /* --- top bar --- */
+        /* fond */
+        header #headerFixedBar {
+            background-color: #161616e0;
+            backdrop-filter: blur(20px);
+        }
+
+        /* boutons */
+        header #headerFixedBar nav a.headerNavbarLink:hover,
+        header #headerFixedBar #headerOmnivoxLogo:hover,
+        header #headerFixedBar span.headerOmnivoxLogo:hover {
+            background-color: #d5d5d524;
+        }
     }
-}
 }
 
 @-moz-document domain("bdeb.omnivox.ca") {
-:root {
-    --bg-primary: #141414;
-    --bg-secondary: #181818;
-    --fg-primary: #222222;
-    --text-color: #cecece;
+    :root {
+        --bg-primary: #141414;
+        --bg-secondary: #181818;
+        --fg-primary: #222222;
+        --text-color: #cecece;
+    }
+
+
+
+    @media (prefers-color-scheme: dark) {
+
+        /* ------ PAGE ACCUEIL ------ */
+        .wrapperFixed,
+        #spRightSize {
+            background-color: var(--bg-primary);
+            color: #fff;
+        }
+
+        /* boutons mio lea */
+        /* texte */
+        #region-raccourcis-services-skytech .raccourci {
+            color: var(--text-color);
+        }
+
+        /* --- slider actualites --- */
+        /* degrade cotes */
+        .slider-portail-zone.slider-portail-zone-next {
+            background-image: linear-gradient(to right, rgba(251, 251, 251, 0), var(--bg-primary));
+        }
+
+        .slider-portail-zone.slider-portail-zone-previous {
+            background-image: linear-gradient(to left, rgba(251, 251, 251, 0), var(--bg-primary));
+        }
+
+        /* boutons fleche */
+        .portail-btn {
+            background-color: #2d2d2d;
+        }
+
+        /* cartes */
+        .carte-portail,
+        .carte-portail .carte-portail-desc,
+        .carte-portail .carte-portail-desc-style,
+        .communaute-recent-wrapper .date-card {
+            background-color: #222;
+            color: var(--text-color);
+        }
+
+        /* --- quoi de neuf ---*/
+        /* fond cartes */
+        #QuoiDeNeufsWrapper {
+            background-color: var(--bg-primary);
+        }
+
+        /* texte */
+        .wrapper-qdn-classe-distance .carte-QDN-classeDistance .carte-portail-titre,
+        .wrapper-qdn-classe-distance .carte-QDN-classeDistance .carte-portail-contenu,
+        .wrapper-qdn-classe-distance .carte-QDN-classeDistance .carte-cours-distance-detail,
+        .wrapper-qdn-classe-distance .carte-QDN-classeDistance[data-type="Futur"] .carte-portail-titre span:not(.long-titre) {
+            color: var(--text-color);
+        }
+
+        /* --- calendrier --- */
+        /* fond */
+        .materialize-wrapper .card-panel {
+            background-color: #222;
+        }
+
+        /* selection mois */
+        .materialize-wrapper .skycalendar .selects-container .input-field input {
+            color: #fff;
+        }
+
+        /* dates de l'autre mois */
+        .materialize-wrapper .skycalendar-table td.is-outside-current-month,
+        .materialize-wrapper .skycalendar-table td.is-disabled {
+            color: #6a6a6a;
+        }
+
+        /* filtres */
+        .filtre-evenements {
+            background-color: #222;
+        }
+
+        /* Evenements a droite calendrier */
+        .calendar-list-wrapper .liste-evenements .evenement .evenement-titre,
+        .calendar-list-wrapper .liste-evenements .evenement .evenement-description {
+            color: var(--text-color);
+        }
+
+        /* carte quand on clique sur un evenement */
+        .modal {
+            background-color: var(--bg-secondary);
+        }
+
+        /* bouton precedent suivant */
+        .calendar-list-wrapper button#btn-load-more-passe,
+        .calendar-list-wrapper button#btn-load-more {
+            background: #222;
+        }
+    }
 }
 
-
-
-@media (prefers-color-scheme: dark) {
-    /* ------ PAGE ACCUEIL ------ */
-    .wrapperFixed,
-    #spRightSize {
-        background-color: var(--bg-primary);
-        color: #fff;
-    }
-
-    /* boutons mio lea */
-    /* texte */
-    #region-raccourcis-services-skytech .raccourci {
-        color: var(--text-color);
-    }
-    /* --- slider actualites --- */
-    /* degrade cotes */
-    .slider-portail-zone.slider-portail-zone-next {
-        background-image: linear-gradient(to right, rgba(251, 251, 251, 0), var(--bg-primary));
-    }
-    .slider-portail-zone.slider-portail-zone-previous {
-        background-image: linear-gradient(to left, rgba(251, 251, 251, 0), var(--bg-primary));
-    }
-
-    /* boutons fleche */
-    .portail-btn {
-        background-color: #2d2d2d;
-    }
-
-    /* cartes */
-    .carte-portail,
-    .carte-portail .carte-portail-desc,
-    .carte-portail .carte-portail-desc-style,
-    .communaute-recent-wrapper .date-card {
-        background-color: #222;
-        color: var(--text-color);
-    }
-
-    /* --- quoi de neuf ---*/
-    /* fond cartes */
-    #QuoiDeNeufsWrapper {
-        background-color: var(--bg-primary);
-    }
-
-    /* texte */
-    .wrapper-qdn-classe-distance .carte-QDN-classeDistance .carte-portail-titre,
-    .wrapper-qdn-classe-distance .carte-QDN-classeDistance .carte-portail-contenu,
-    .wrapper-qdn-classe-distance .carte-QDN-classeDistance .carte-cours-distance-detail,
-    .wrapper-qdn-classe-distance .carte-QDN-classeDistance[data-type="Futur"] .carte-portail-titre span:not(.long-titre) {
-        color: var(--text-color);
-    }
-
-    /* --- calendrier --- */
-    /* fond */
-    .materialize-wrapper .card-panel {
-        background-color: #222;
-    }
-
-    /* selection mois */
-    .materialize-wrapper .skycalendar .selects-container .input-field input {
-        color: #fff;
-    }
-
-    /* dates de l'autre mois */
-    .materialize-wrapper .skycalendar-table td.is-outside-current-month,
-    .materialize-wrapper .skycalendar-table td.is-disabled {
-        color: #6a6a6a;
-    }
-
-    /* filtres */
-    .filtre-evenements {
-        background-color: #222;
-    }
-
-    /* Evenements a droite calendrier */
-    .calendar-list-wrapper .liste-evenements .evenement .evenement-titre,
-    .calendar-list-wrapper .liste-evenements .evenement .evenement-description {
-        color: var(--text-color);
-    }
-
-    /* carte quand on clique sur un evenement */
-    .modal {
-        background-color: var(--bg-secondary);
-    }
-
-    /* bouton precedent suivant */
-    .calendar-list-wrapper button#btn-load-more-passe,
-    .calendar-list-wrapper button#btn-load-more {
-        background: #222;
-    }
-}
-}
-
-@-moz-document domain("www-bdb-ovx.omnivox.ca") {
-
-}
+@-moz-document domain("www-bdb-ovx.omnivox.ca") {}
